@@ -1,0 +1,327 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;800&display=swap');
+/* ================================================================ 
+            Resetting css and adding font to whole page
+   ================================================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Epilogue', sans-serif;
+}
+
+/* ================================================================ 
+            Avoiding scrolls horizontally and vertically
+   ================================================================ */
+html {
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+body {
+    overflow-x: hidden;
+    overflow-y: hidden;
+    height: 100vh;
+    background-color: hsl(0, 0%, 98%);
+}
+
+.logo {
+    height: 2.5rem;
+    width: 4.5rem;
+}
+/* ================================================================ 
+                Navigation lists and links in navbar
+   ================================================================ */
+.nav-lists {
+    list-style: none;
+    gap: 3rem;
+    font-size: 18px;
+}
+.nav-links {
+    text-decoration: none;
+    color: hsl(0, 0%, 41%);
+    font-size: 18px;
+}
+.nav-links:hover {
+    color: hsl(0, 0%, 8%);
+}
+
+/* ================================================================ 
+        Dropdown accordion for Features and Company navigation
+   ================================================================ */
+.accordion {
+    position: relative;
+}
+.accordion-button {
+    padding: 0;
+    background-color: hsl(0, 0%, 98%);
+}
+.accordion-item p {
+    margin-bottom: 0;
+}
+
+/* styling the dropdown-sec class */
+.accordion-collapse {     
+    position: absolute;
+    width: fit-content;
+    right: 0px;
+    top: 40px;
+    z-index: 100;
+}
+.accordion-body {         
+    border-radius: 0.5rem;
+    list-style: none;
+    padding: 0.5rem 1.5rem;
+    width: max-content;
+    justify-content: space-between;
+    background-color: white;
+    box-shadow: 4px 4px 8px #a7a4a445;
+}
+.accordion-body li {
+    margin: 0.5rem 0;
+    list-style: none;
+    padding: 0;
+    align-items: center;
+    gap: 0.5rem;
+}
+.accordion-body p {
+    font-size: 14px;
+}
+
+/* ================================================================ 
+                Hamburger menu for mobile device
+   ================================================================ */
+.mobile-nav-btn {
+    display: none;
+    background: transparent;
+    cursor: pointer;
+}
+.mobile-nav-icon {
+    height: 3rem;
+    width: 3rem;
+}
+.mobile-nav-icon[name="close-outline"] {
+    display: none;
+}
+
+/* ================================================================ 
+                            Hero text sec
+   ================================================================ */
+.text-sec {
+    justify-content: space-between;
+}
+.paragraph{
+    font-size: 18px;
+    margin-bottom: 0;
+}
+.text-sec button {
+    border-radius: 10px;
+    width: fit-content;
+    padding: 1rem 1.5rem;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background-color: black;
+}
+.text-sec button:hover {
+    color: black;
+    background-color: white;
+}
+/* ********* Hero image ********** */
+.image-sec img {
+    height: 100%;
+} 
+
+/* ================================================================ 
+                            Footer
+   ================================================================ */
+.attribution { 
+    font-size: 11px; 
+    text-align: center;
+}
+.attribution a { 
+    color: rgb(18, 23, 54); 
+}
+
+/* ================================================================ 
+            Media queries for device width 430px to 1024px
+   ================================================================ */
+@media screen and (min-width:430px) and (max-width:1024px) {
+    .header {
+        margin: 1rem 0;
+    }
+    .nav-bar {
+        justify-content: space-between;    
+    }
+    .hero-sec {
+        margin: 4rem 2rem;
+        justify-content: center;
+        flex-direction: row-reverse;
+    }
+    .heading {
+        font-size: 2.5rem;
+        font-weight: 800;
+        margin-bottom: 0;
+        margin-top: 3rem;
+    }
+    .sponsors-logos {
+        margin: 1rem 0;
+        width: 100%;
+    }
+    .sponsors-logos img {
+        height: 1.3rem;
+        width: 2.5rem;
+        justify-content: space-between;
+    }
+    .image-sec {
+        max-height: 75vh;
+    }
+}
+
+/* ================================================================ 
+        Media queries for device width 1025px and greater
+   ================================================================ */
+@media screen and (min-width:1025px) {
+    .header {
+        margin: 1rem 0;
+    }
+    .nav-bar {
+        justify-content: space-between !important;    
+    }
+    .header {
+        display: flex ;
+    }
+    .image-sec {
+        max-height: 70vh;
+        display: flex;
+        justify-content: center;
+    }
+    .image-sec img {
+        height: 100%;
+    } 
+    .hero-sec {
+        margin: 4.3rem 2rem;
+        gap: 6rem;
+        justify-content: center;
+        flex-direction: row-reverse;
+    }
+    .heading {
+    font-size: 4.5rem;
+    font-weight: 800;
+    margin-bottom: 0;
+    margin-top: 6rem;
+    }
+    .sponsors-logos {
+        margin: 1rem 0;
+        width: 100%;
+    }
+    .sponsors-logos img {
+        height: 1.7rem;
+        width: 6.5rem;
+        justify-content: space-between;
+    }
+}
+
+/* ================================================================ 
+                Media queries for mobile device
+   ================================================================ */
+@media screen and (max-width:426px){
+    .header {
+        position: relative;
+        justify-content: space-between;
+    }
+    .nav-lists {
+        padding-left: 0;
+        flex-direction: column;
+        text-align: center;
+    }
+    .nav-lists li {
+        margin: 1rem 0;
+    }
+    /* ------------------------------------------------- 
+                    Hamburger menu
+       ------------------------------------------------- */
+    .mobile-nav-btn {
+        display: block;
+        z-index: 99;
+        right: 0;
+    }
+    /* ********** Hiding navbar by default and animating it ********* */
+    .nav-bar {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        background-color: hsl(0, 0%, 98%);
+        top: -10px;
+        left: 0;
+        justify-content: center; 
+        align-items: center;
+        padding-left: 0;
+        overflow-y: hidden;
+        transform: translateX(100%);
+        transition: all 0.5s linear;
+        visibility: hidden;
+        opacity: 0;
+        pointer-events: none;
+    }
+    /* ********* when active class present in header ==> navbar is visible ********* */
+    .active .nav-bar {
+        transform: translateX(0);
+        opacity: 1 ;
+        visibility: visible ;
+        pointer-events: auto;
+    }
+    /* ********* when mobile navbar active ==> close icon will be visible  */
+    .active .mobile-nav-btn .mobile-nav-icon[name="close-outline"] {
+        display: block;
+    }
+    /* ********* when navbar active in mobile ==> hiding hamburger menu */
+    .active .mobile-nav-btn .mobile-nav-icon[name="menu-outline"] {
+        display: none;
+    }
+    .login-register {
+        display: flex;
+        flex-direction: column;
+    }
+    .accordion-collapse {
+        left: -25px;
+    }
+    /* ------------------------------------------------- 
+                Hero sec in mobile view
+       ------------------------------------------------- */
+    .hero-sec {
+        margin:1.4rem 0;
+    }
+    .image-sec {
+        padding: 0;
+    }
+    .text-sec {
+        margin: 1rem 0;
+        align-items: center;
+    }
+    .heading {
+        font-size: 1.7rem;
+        font-weight: bold;
+        margin-top: 1.1rem;
+        }
+    .paragraph {
+        font-size: 13px;
+        margin: 0.5rem 0;
+        text-align: center;
+    }
+    .text-sec button {
+        margin: 0.6rem 0;
+        padding: 0.5rem 0.8rem;
+        font-size: 16px;
+        font-weight: bold;
+    }
+    .sponsors-logos {
+        margin: 1rem 0;
+        width: 100%;
+    }
+    .sponsors-logos img {
+        height: 1.2rem;
+        width: 3.5rem;
+        justify-content: space-between;
+    }
+}

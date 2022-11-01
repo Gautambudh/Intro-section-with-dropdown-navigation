@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container-fluid">
+    <!-- Header row containing logo and navigation links -->
+    <div class="row">
+      <header class="header col-lg-11 col-md-11 mx-lg-auto mx-md-auto d-flex align-items-center">
+        <img class="logo" src="./images/logo.svg" alt="logo"> 
+        <nav class="nav-bar w-100 d-flex align-items-center">
+          <ul class="nav-lists d-lg-flex d-md-flex py-0 my-0 ">
+            <!-- dropdown for Features -->
+            <li class="accordion accordion-flush">
+              <div class="accordion-item">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#Features" aria-expanded="false" aria-controls="Features">
+                  <p class="nav-links px-1">Features</p>
+                </button>
+                <div id="Features" class="accordion-collapse collapse">
+                  <ul class="accordion-body">
+                    <li class="d-flex"><img src="./images/icon-todo.svg" alt="Todo"><p>Todo List</p> </li>
+                    <li class="d-flex"><img src="./images/icon-calendar.svg" alt="Calender"><p>Calander</p> </li>
+                    <li class="d-flex"><img src="./images/icon-reminders.svg" alt="Reminders"><p>Reminders</p></li>
+                    <li class="d-flex"><img src="./images/icon-planning.svg" alt="Planning"><p>Planning</p></li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <!-- dropdown for Company -->
+            <li class="accordion accordion-flush">
+              <div class="accordion-item">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#Company" aria-expanded="false" aria-controls="Company">
+                  <p class="nav-links px-1">Company</p>
+                </button>
+                <div id="Company" class="accordion-collapse collapse">
+                  <ul class="accordion-body">
+                    <li class="d-flex"><p>History</p></li>
+                    <li class="d-flex"><p>Our Team</p></li>
+                    <li class="d-flex"><p>Blog</p></li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li><a class="nav-links px-1" href="#">Careers</a></li>
+            <li><a class="nav-links px-1" href="#">About</a></li>
+          </ul>
+          <!-- Login and Register button -->
+          <div class="login-register d-flex gap-4">
+            <a class="btn btn-light" href="#">Login</a>
+            <a class="btn btn-outline-dark" href="#">Register</a>
+          </div>
+        </nav>
+        <!-- Hamburger menu for mobile device -->
+        <div class="mobile-nav-btn ">
+          <ion-icon name="menu-outline" class="mobile-nav-icon"></ion-icon>
+          <ion-icon name="close-outline" class="mobile-nav-icon"></ion-icon>
+        </div>
+      </header>
+    </div>
+    <!-- Hero-sec container -->
+    <div class="container">
+      <div class="row hero-sec">
+        <!-- hero-image -->
+        <div class="col-lg-5 col-md-5 col-sm-6 image-sec">
+          <img class="img-fluid d-none d-sm-block" src="./images/image-hero-desktop.png" alt="image">
+          <img class="col img-fluid d-lg-none d-md-none d-sm-none" src="./images/image-hero-mobile.png" alt="web-3.0">
+        </div>
+        <!-- hero-text -->
+        <div class="col-lg-5 col-md-6 col-sm-6 col-12 text-sec d-flex flex-column">
+          <h1 class="heading">Make remote work</h1>
+          <p class="text-muted paragraph">Get your team in sync, no matter your location. Streamline processes, 
+            create team rituals, and watch productivity soar.</p>
+          <button>Learn more</button>
+          <div class="sponsors-logos d-flex justify-content-between">
+            <img src="./images/client-databiz.svg" alt="sponsor">
+            <img src="./images/client-audiophile.svg" alt="sponsor">
+            <img src="./images/client-meet.svg" alt="sponsor">
+            <img src="./images/client-maker.svg" alt="sponsor">
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/Gautambudh">Gautam Kumar</a>.
+  </footer>
+
+  <!-- bootstrap scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous">
+  </script>
+
+  <!-- scripts for icons -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <!-- custom JS for toggling mobile menu -->
+  <script src="./index.js"></script>
+</body>
+</html>
